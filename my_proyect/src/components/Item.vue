@@ -6,7 +6,7 @@
         <h4 class="card-title">{{product}}</h4>
         <div class="card-text">${{price}}</div>
         <div class="row justify-content-end">
-          <button class="btn btn-primary" @click="addToCart(quantity)">Add to cart</button>
+          <button class="btn btn-primary" @click="addToCart(quantity)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -20,7 +20,12 @@ export default {
   methods: {
     addToCart(quantity) {
       this.$store.dispatch('addToCart', quantity);
-    console.log(quantity)
+      console.log(quantity)
+    },
+    getData(commit){
+      this.$store.dispatch('getData');
+      console.log(commit)
+
     },
   },
 };

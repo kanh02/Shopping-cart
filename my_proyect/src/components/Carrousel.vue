@@ -34,7 +34,7 @@ export default {
      computed:{
   
     itemsdata() { return this.$store.getters.itemsdata; },
-},
+  },
 }
 
 </script>

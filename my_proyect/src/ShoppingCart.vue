@@ -7,7 +7,6 @@
     <div id="shoppingCart" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <h3 class="modal-title">Shopping Cart</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>  
@@ -38,7 +37,6 @@
     </div>
 </template>
 
-
 <script>
 export default {
   name: 'shoppingCart',
@@ -58,6 +56,7 @@ export default {
   },methods: {
     removeFromCart(index) {this.$store.dispatch('removeFromCart', index);},
   }
+  
 };
 </script>
 <style scoped>

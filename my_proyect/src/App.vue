@@ -32,47 +32,29 @@ import Carrousel from './components/Carrousel.vue';
 
 export default {
   name: 'app',
-
-  computed:{
-    itemsdata() { return this.$store.getters.itemsdata; },
-},
-   components: {
-    Search,
-    Item,
-    ShoppingCart,
-    Carrousel,
-  },
-    //created() {
-    //  this.getData();
-   // },
-  //  methods:{
-    //  getData:function() {
-     //   var vue = this;
-		//	fetch("https://api.myjson.com/bins/1037pq", {
-		//		method: "GET",
-		//	}).then(function (response) {
-		//		if (response.ok) {
-		//			return response.json();
-		//		}
-		//		throw new Error(response.statusText);
-		//	}).then(function (json) {
-		//		vue.itemsdata = json.items;
-		//		console.log(vue.itemsdata);
-
-		//	}).then(function () {
-		//	}).catch(function (error) {
-		//		console.log("Request failed: " + error.message);
-		//	})
-    //},
-	//}
-};
-</script>
-<style scoped>
-img{
-  width: 120px;
-  height: 150px;
-}
-</style>
-
-
-
+  
+      methods:{
+        printItems: function(){
+          console.log( this.$store.getters.itemsdata)
+          }
+          },
+          components: {
+            Search,
+            Item,
+            ShoppingCart,
+            Carrousel
+            },
+            created(){
+              this.printItems();
+              },
+              computed:{
+                itemsdata() { return this.$store.getters.itemsdata; },
+                },
+                };
+                </script>
+                <style scoped>
+                  img{
+                    width: 120px;
+                    height: 150px;
+            }
+            </style>
